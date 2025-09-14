@@ -180,7 +180,7 @@ All colors MUST be HSL for proper theming.
   }
 
   .btn-hero-outline {
-    @apply bg-transparent text-white border-2 border-white hover:bg-white hover:text-secondary transform hover:scale-105 transition-all duration-300 font-semibold px-8 py-4 text-lg;
+    @apply bg-white/10 backdrop-blur-sm text-white border-2 border-white/80 hover:bg-white hover:text-secondary transform hover:scale-105 transition-all duration-300 font-semibold px-8 py-4 text-lg;
   }
 
   /* Track card hover effects */
