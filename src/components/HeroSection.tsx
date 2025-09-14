@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Users, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero-track.jpg";
+import SponsorCarousel from "./SponsorCarousel";
 
 const HeroSection = () => {
   return (
@@ -54,6 +55,11 @@ const HeroSection = () => {
             </Button>
           </div>
         </div>
+      </div>
+
+      {/* Sponsor Carousel - positioned above fold */}
+      <div className="absolute bottom-20 left-0 right-0 z-10">
+        <SponsorCarousel />
       </div>
 
       {/* Scroll Indicator */}
