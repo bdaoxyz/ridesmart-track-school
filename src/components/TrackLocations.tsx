@@ -77,7 +77,7 @@ const TrackLocations = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tracks.map((track, index) => (
-            <Card key={track.name} className="track-card overflow-hidden border-0 shadow-elevation">
+            <Card key={track.name} className="track-card group overflow-hidden border-0 shadow-elevation">
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={track.image} 

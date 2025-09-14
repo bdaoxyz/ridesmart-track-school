@@ -180,7 +180,7 @@ All colors MUST be HSL for proper theming.
 
   /* Track card hover effects */
   .track-card {
-    @apply group relative overflow-hidden rounded-lg transition-all duration-500 hover:shadow-elevation cursor-pointer;
+    @apply relative overflow-hidden rounded-lg transition-all duration-500 hover:shadow-elevation cursor-pointer;
   }
 
   .track-card::before {
