@@ -5,11 +5,14 @@ import SponsorCarousel from "./SponsorCarousel";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Hero Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ 
+          backgroundImage: `url(${heroImage})`,
+          height: 'calc(100% - 120px)' // Stop before carousel area
+        }}
       >
         <div className="absolute inset-0 bg-gradient-track"></div>
       </div>
@@ -57,8 +60,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Sponsor Carousel - positioned above fold */}
-      <div className="absolute bottom-20 left-0 right-0 z-10">
+      {/* Sponsor Carousel - positioned at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 z-10">
         <SponsorCarousel />
       </div>
 
