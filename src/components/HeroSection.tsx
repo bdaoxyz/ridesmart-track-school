@@ -49,7 +49,7 @@ const HeroSection = () => {
               Book Your Track Day
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="btn-hero-outline">
+            <Button size="lg" variant="outline" className="btn-hero-outline text-primary">
               View Upcoming Events
             </Button>
           </div>
