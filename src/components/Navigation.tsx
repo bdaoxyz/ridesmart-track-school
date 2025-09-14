@@ -39,7 +39,7 @@ const Navigation = () => {
             <img 
               src={logo} 
               alt="RideSmart Motorcycle School" 
-              className="h-10 lg:h-12 w-auto"
+              className="h-12 lg:h-16 w-auto"
             />
           </div>
 
