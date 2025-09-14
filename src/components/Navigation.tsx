@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import logo from "@/assets/ridesmart-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,16 +29,18 @@ const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-secondary/95 backdrop-blur-md shadow-elevation' 
-          : 'bg-transparent'
+          : 'bg-black/20 backdrop-blur-sm'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="font-racing text-2xl lg:text-3xl text-white">
-              Ride<span className="text-primary">Smart</span>
-            </div>
+            <img 
+              src={logo} 
+              alt="RideSmart Motorcycle School" 
+              className="h-10 lg:h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -46,7 +49,7 @@ const Navigation = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white hover:text-primary transition-colors duration-200 font-medium"
+                className="text-white hover:text-primary transition-colors duration-200 font-medium text-shadow-sm"
               >
                 {link.name}
               </a>
@@ -57,7 +60,7 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <a 
               href="tel:+1-555-TRACK-DAY" 
-              className="flex items-center gap-2 text-white hover:text-primary transition-colors"
+              className="flex items-center gap-2 text-white hover:text-primary transition-colors text-shadow-sm"
             >
               <Phone className="h-4 w-4" />
               <span className="font-medium">Call Now</span>
