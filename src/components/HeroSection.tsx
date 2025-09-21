@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Users, MapPin } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
+import heroPoster from "@/assets/hero-poster.jpg";
 import SponsorCarousel from "./SponsorCarousel";
 
 const HeroSection = () => {
@@ -8,7 +9,7 @@ const HeroSection = () => {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Hero Background Video */}
       <div 
-        className="absolute inset-0 overflow-hidden"
+        className="absolute inset-0 overflow-hidden bg-gradient-to-b from-gray-900 to-black"
         style={{ height: 'calc(100% - 120px)' }} // Stop before carousel area
       >
         <video
@@ -16,6 +17,8 @@ const HeroSection = () => {
           muted
           loop
           playsInline
+          preload="metadata"
+          poster={heroPoster}
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src={heroVideo} type="video/mp4" />
