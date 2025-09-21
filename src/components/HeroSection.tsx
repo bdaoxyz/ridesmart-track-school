@@ -1,19 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Users, MapPin } from "lucide-react";
-import heroImage from "@/assets/hero-track.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 import SponsorCarousel from "./SponsorCarousel";
 
 const HeroSection = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Hero Background Image */}
+      {/* Hero Background Video */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ 
-          backgroundImage: `url(${heroImage})`,
-          height: 'calc(100% - 120px)' // Stop before carousel area
-        }}
+        className="absolute inset-0 overflow-hidden"
+        style={{ height: 'calc(100% - 120px)' }} // Stop before carousel area
       >
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-track"></div>
       </div>
 
